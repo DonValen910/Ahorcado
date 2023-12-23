@@ -5,7 +5,9 @@ const contenedorPalabras = document.getElementById('guessingWords');
 
 function enviarTxt() {
     text = document.getElementById("textInput").value;
-    if (text === "") {
+    if (/\d/.test(text)) {
+        alert("La palabra no puede contener números.");
+    } else if (text === "") {
         alert("El campo está vacío. Por favor, ingresa una palabra.");
     } else if (text.includes(" ")) {
         alert("La palabra no puede contener espacios.");
