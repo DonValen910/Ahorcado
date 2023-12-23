@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <!--Font family-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Bienvenido al ahorcado</h1>
+    </header>
+
+    <section id="selectWord">
+        <h1 class="subTitulo">Ingrese una palabra para el rival</h1>
+        <input type="text" id="textInput" required>
+        <input type="button" value="A jugar" class="boton" onclick="enviarTxt()">
+    </section>
+
+    <section id="hangingBoard">
+        <h1 class="subTitulo">Empieza el juego</h1>
+        <h2 id="resultado"></h2>
+        <div id="img">
+            <img src="img/0.png" id="imagenes" alt="">
+        </div>
+        <div id="guessingWords"></div>
+        <div id="btn">
+            <button class="miBoton" onclick="compareLetter('Q')">Q</button>
+            <button class="miBoton" onclick="compareLetter('W')">W</button>
+            <button class="miBoton" onclick="compareLetter('E')">E</button>
+            <button class="miBoton" onclick="compareLetter('R')">R</button>
+            <button class="miBoton" onclick="compareLetter('T')">T</button>
+            <button class="miBoton" onclick="compareLetter('Y')">Y</button>
+            <button class="miBoton" onclick="compareLetter('U')">U</button>
+            <button class="miBoton" onclick="compareLetter('I')">I</button>
+            <button class="miBoton" onclick="compareLetter('O')">O</button>
+            <button class="miBoton" onclick="compareLetter('P')">P</button>
+            <button class="miBoton" onclick="compareLetter('A')">A</button>
+            <button class="miBoton" onclick="compareLetter('S')">S</button>
+            <button class="miBoton" onclick="compareLetter('D')">D</button>
+            <button class="miBoton" onclick="compareLetter('F')">F</button>
+            <button class="miBoton" onclick="compareLetter('G')">G</button>
+            <button class="miBoton" onclick="compareLetter('H')">H</button>
+            <button class="miBoton" onclick="compareLetter('J')">J</button>
+            <button class="miBoton" onclick="compareLetter('K')">K</button>
+            <button class="miBoton" onclick="compareLetter('L')">L</button>
+            <button class="miBoton" onclick="compareLetter('Ñ')">Ñ</button>
+            <button class="miBoton" onclick="compareLetter('Z')">Z</button>
+            <button class="miBoton" onclick="compareLetter('X')">X</button>
+            <button class="miBoton" onclick="compareLetter('C')">C</button>
+            <button class="miBoton" onclick="compareLetter('V')">V</button>
+            <button class="miBoton" onclick="compareLetter('B')">B</button>
+            <button class="miBoton" onclick="compareLetter('N')">N</button>
+            <button class="miBoton" onclick="compareLetter('M')">M</button>
+        </div>
+        <h2>Intentos</h2>
+        <h1 id="contador">0</h1>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
