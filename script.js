@@ -38,6 +38,8 @@ let letrasAdivinadas = []; // Mantener un registro de las letras adivinadas
 
 function compareLetter(letra) {
     ponerPalabras = document.querySelectorAll('#guessingWords div h1');
+    document.getElementById(letra).style.background = "#8c8884";
+    document.getElementById(letra).style.border = "1px solid black";
     acertó = false;
 
     // Verificar si la letra ya ha sido adivinada
