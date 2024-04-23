@@ -36,10 +36,17 @@ function visibleHangingBoard() {
 
 let letrasAdivinadas = []; // Mantener un registro de las letras adivinadas
 
+const botones = document.querySelectorAll('.miBoton'); // Mover la selección de botones fuera de la función
+
+botones.forEach(boton => {
+    boton.addEventListener('click', function () {
+        this.style.backgroundColor = '#8c8884'; // Cambia el color de fondo del botón
+        this.style.color = '#ffffff'; // Cambia el color del texto del botón
+    });
+});
+
 function compareLetter(letra) {
     ponerPalabras = document.querySelectorAll('#guessingWords div h1');
-    document.getElementById(letra).style.background = "#8c8884";
-    document.getElementById(letra).style.border = "1px solid black";
     acertó = false;
 
     // Verificar si la letra ya ha sido adivinada
@@ -66,7 +73,6 @@ function compareLetter(letra) {
     }
     gameOver();
 }
-
 
 function gameOver() {
     if (errores == 6) {
